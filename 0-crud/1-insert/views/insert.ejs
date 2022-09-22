@@ -28,8 +28,9 @@
   <body>
     <div class="container">
       <form method="post" action="/addUser" autocomplete="off">
-        UserName : <input type="text" name="username" required /> PassWord
-        :<input type="password" name="passwd" required />
+        UserName :
+        <input type="text" maxlength="10" name="username" required /> PassWord
+        :<input type="password" maxlength="20" name="passwd" required />
         <input type="submit" value="Register" />
       </form>
     </div>

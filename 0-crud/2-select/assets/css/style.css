@@ -1,0 +1,17 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+  height: 40px;
+}
+
+td {
+  border: 1px solid #ccc;
+}
