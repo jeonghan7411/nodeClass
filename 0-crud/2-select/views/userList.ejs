@@ -9,23 +9,29 @@
   </head>
   <body>
     <div class="container">
+      <a href="/">메인</a>
+      <a href="/addUser">추가</a>
       <table>
         <tr>
           <td>Number</td>
           <td>Username</td>
-          <td>Password</td>
-          <td>Regdate</td>
+          <!-- <td>Password</td>
+          <td>Regdate</td> -->
           <td>-</td>
         </tr>
 
         <% if(result == "") {%>
-        <td colspan="5">등록된 회원이 없습니다.</td>
+        <td colspan="3">등록된 회원이 없습니다.</td>
         <% }else { %> <% for(let i=0; i < result.length; i++) {%>
         <tr>
           <td><%= result[i].regID %></td>
-          <td><%= result[i].username %></td>
-          <td><%= result[i].passwd %></td>
-          <td><%= result[i].regdate %></td>
+          <td>
+            <a href="/userView/<%= result[i].regID %>"
+              ><%= result[i].username %></a
+            >
+          </td>
+          <!-- <td><%= result[i].passwd %></td>
+          <td><%= result[i].regdate %></td> -->
           <td>
             <a href="/upUser/<%= result[i].regID %>">Update </a>
             /
