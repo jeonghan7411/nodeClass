@@ -1,0 +1,91 @@
+<%- include('inc/_header') %>
+<body>
+  <header>
+    <div class="nav-wrap" id="nav-wrap">
+      <div class="logo-wrap">
+        <a href="/"><img src="logo.jpg" alt="" /></a>
+      </div>
+      <button class="toggle" id="toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="link-wrap" id="link-wrap">
+        <li><a href="">Home</a></li>
+        <li><a href="">Menu</a></li>
+        <li><a href="">Content</a></li>
+        <li><a href="">Board</a></li>
+        <li><a href="">Q&A</a></li>
+      </ul>
+
+      <div class="icon-wrap" id="icon-wrap">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-solid fa-envelope"></i>
+        <i class="fa-brands fa-facebook"></i
+        ><i class="fa-brands fa-twitter"></i>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="memberList-wrap">
+      <div class="list-top">
+        <div class="list-top-left"><h2>회원목록</h2></div>
+        <form action="">
+          <div class="list-top-right">
+            <div class="memlist-select-wrap">
+              <select name="" id="">
+                <option>조건검색</option>
+                <option value="">이름</option>
+                <option value="">이메일</option>
+                <option value="">가입날짜</option>
+              </select>
+            </div>
+            <div class="memlist-input-wrap"><input type="text" /></div>
+            <div class="memlist-btn-wrap"><button>검색</button></div>
+          </div>
+        </form>
+      </div>
+      <div class="list-main">
+        <table>
+          <tr>
+            <th>No</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>RegDate</th>
+            <th>Update/Delete</th>
+          </tr>
+
+          <% if(result == "") {%>
+          <td colspan="5">
+            <div class="no-mem">등록된 회원이 없습니다.</div>
+          </td>
+          <%}else {%> <% for(let i=0; i< result.length; i++){%>
+          <tr>
+            <td><%= result[i].idx%></td>
+            <td><a href=""><%= result[i].id%></a></td>
+            <td><%= result[i].name%></td>
+            <td><%= result[i].email%></td>
+            <td><%= result[i].regdate%></td>
+            <td>
+              <button id="updateBtn">
+                <i class="fa-regular fa-pen-to-square"></i>
+              </button>
+              <a href=""><i class="fa-solid fa-trash"></i></a>
+            </td>
+          </tr>
+          <% }}%>
+        </table>
+      </div>
+      <form action="/regist">
+        <div class="list-bottom">
+          <button>회원추가</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <%- include('inc/_modal') %>
+  <script src="./js/toggle.js"></script>
+  <script src="./js/modal.js"></script>
+</body>

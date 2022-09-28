@@ -1,0 +1,75 @@
+@import url(./reset.css);
+@import url(./index.css);
+@import url(./regist.css);
+@import url(./memberList.css);
+@import url(./modal.css);
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap");
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  --main-color: rgb(69, 169, 252);
+}
+
+/* @media screen and (max-width: 900px) {
+  .nav-wrap {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  .toggle {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    z-index: 99;
+  }
+
+  .toggle i {
+    color: rgb(69, 169, 252);
+    font-size: 38px;
+    cursor: pointer;
+  }
+
+  .link-wrap {
+    display: none;
+  }
+
+  .icon-wrap {
+    display: none;
+  }
+
+  .show-link {
+    position: absolute;
+    width: 95%;
+    background-color: white;
+    top: 1rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .show-link a:hover {
+    padding-left: 1.5rem;
+  }
+
+  .btn-wrap {
+    flex-direction: column;
+    margin-left: 25%;
+    height: auto;
+  }
+  .btn-wrap div {
+    margin-bottom: 1rem;
+  }
+
+  .regist-wrap {
+    width: 20rem;
+  }
+} */

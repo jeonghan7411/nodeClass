@@ -1,0 +1,114 @@
+@charset 'utf-8';
+
+.nav-wrap {
+  margin-top: 30px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  font-size: 22px;
+}
+
+.logo-wrap {
+  width: 100px;
+  height: 80px;
+}
+
+.toggle {
+  display: none;
+}
+
+ul {
+  display: flex;
+}
+
+ul li a {
+  margin-right: 2rem;
+  font-size: 2rem;
+}
+
+ul li a:hover {
+  color: var(--main-color);
+}
+
+.icon-wrap button,
+.btn-wrap button {
+  background-color: var(--main-color);
+  color: white;
+  font-size: 40px;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.icon-wrap button i,
+.btn-wrap button i {
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+
+.icon-wrap i {
+  color: var(--main-color);
+  margin-right: 10px;
+}
+
+.icon-wrap i:hover {
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(./image/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+}
+
+.btn-wrap div {
+  width: 15rem;
+  height: 300px;
+}
+
+.btn-center-wrap button {
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  background-color: white;
+}
+
+.btn-left:hover,
+.btn-rigth:hover {
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  background-color: white;
+}
+
+.btn-center:hover {
+  border: 1px solid var(--main-color);
+  color: white;
+  background-color: var(--main-color);
+}

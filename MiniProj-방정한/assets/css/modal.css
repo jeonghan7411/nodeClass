@@ -1,0 +1,21 @@
+.backDrop.visible {
+  display: block;
+  pointer-events: all;
+}
+
+.loginModal {
+  position: fixed;
+  z-index: 100;
+  width: 80%;
+  top: 30vh;
+  left: 10%;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid RGB(148, 180, 159);
+  border-radius: 10px;
+  padding-bottom: 2rem;
+  box-shadow: 0 2px 8px RGB(148, 180, 159, 0.5);
+}

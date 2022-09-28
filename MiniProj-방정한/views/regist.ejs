@@ -1,0 +1,83 @@
+<%- include('inc/_header') %>
+<body>
+  <header>
+    <div class="nav-wrap" id="nav-wrap">
+      <div class="logo-wrap">
+        <a href="/"><img src="logo.jpg" alt="" /></a>
+      </div>
+      <button class="toggle" id="toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="link-wrap" id="link-wrap">
+        <li><a href="">Home</a></li>
+        <li><a href="">Menu</a></li>
+        <li><a href="">Content</a></li>
+        <li><a href="">Board</a></li>
+        <li><a href="">Q&A</a></li>
+      </ul>
+
+      <div class="icon-wrap" id="icon-wrap">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-solid fa-envelope"></i>
+        <i class="fa-brands fa-facebook"></i
+        ><i class="fa-brands fa-twitter"></i>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <form action="" method="post" autocomplete="off" id="form">
+      <div class="regist-wrap">
+        <div class="regist-input-wrap">
+          <div class="label-wrap"><label>아이디:</label></div>
+          <div class="regist-input">
+            <input type="text" name="userid" id="userid" class="userid" />
+            <small></small>
+          </div>
+        </div>
+
+        <div class="regist-input-wrap">
+          <div class="label-wrap"><label>비밀번호:</label></div>
+          <div class="regist-input">
+            <input
+              type="password"
+              name="userpwd"
+              id="userpwd"
+              class="userpwd"
+            />
+            <small></small>
+          </div>
+        </div>
+
+        <div class="regist-input-wrap">
+          <div class="label-wrap"><label>이름:</label></div>
+          <div class="regist-input">
+            <input type="text" name="username" id="username" class="username" />
+            <small></small>
+          </div>
+        </div>
+
+        <div class="regist-input-wrap">
+          <div class="label-wrap"><label>이메일:</label></div>
+          <div class="regist-input">
+            <input
+              type="email"
+              name="useremail"
+              id="useremail"
+              class="useremail"
+            />
+            <small></small>
+          </div>
+        </div>
+
+        <div class="regist-btn-wrap">
+          <input type="submit" value="가입" id="submitbtn" />
+        </div>
+      </div>
+    </form>
+  </main>
+  <script src="./js/toggle.js"></script>
+  <script src="./js/regist.js"></script>
+</body>

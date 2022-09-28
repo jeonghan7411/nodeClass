@@ -1,0 +1,118 @@
+@charset 'utf-8';
+
+.memberList-wrap {
+  width: 1300px;
+  background-color: white;
+  padding: 50px;
+  border-radius: 5px;
+}
+
+.list-top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  align-items: center;
+}
+
+.list-top-left h2 {
+  font-size: 36px;
+  color: var(--main-color);
+}
+
+.list-top-right {
+  display: flex;
+  justify-content: flex-end;
+  width: 400px;
+}
+.list-top-right div {
+  margin-right: 10px;
+  height: 25px;
+  line-height: 10px;
+}
+
+.memlist-input-wrap input {
+  border: 1px solid #eee;
+  border-radius: 3px;
+}
+
+.memlist-btn-wrap button {
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.list-main table {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.no-mem {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  font-size: 28px;
+}
+
+.list-main th {
+  background-color: var(--main-color);
+  color: white;
+  height: 80px;
+  font-size: 24px;
+  padding: 5px;
+}
+
+.list-main tr {
+  height: 50px;
+  border: 1px solid #eee;
+}
+
+.list-main td:first {
+  width: 15%;
+  margin-left: 10px;
+}
+
+.list-main td:nth-child(2) {
+  width: 25%;
+}
+
+.list-main td:nth-child(2) a:hover {
+  color: red;
+}
+
+.list-main td:nth-child(3) {
+  width: 15%;
+}
+
+.list-main td:nth-child(4) {
+  width: 25%;
+}
+
+.list-main td:nth-child(5) {
+  width: 15%;
+}
+
+.list-main td:last-child i {
+  font-size: 22px;
+  color: var(--main-color);
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.list-bottom {
+  float: right;
+  margin-top: 10px;
+  width: 80px;
+  height: 30px;
+}
+
+.list-bottom button {
+  background-color: var(--main-color);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}

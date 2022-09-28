@@ -1,0 +1,65 @@
+<%- include('inc/_header') %>
+<body>
+  <header>
+    <div class="nav-wrap" id="nav-wrap">
+      <div class="logo-wrap">
+        <a href="/"><img src="logo.jpg" alt="" /></a>
+      </div>
+      <button class="toggle" id="toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="link-wrap" id="link-wrap">
+        <li><a href="">Home</a></li>
+        <li><a href="">Menu</a></li>
+        <li><a href="">Content</a></li>
+        <li><a href="">Board</a></li>
+        <li><a href="">Q&A</a></li>
+      </ul>
+
+      <div class="icon-wrap" id="icon-wrap">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-solid fa-envelope"></i>
+        <i class="fa-brands fa-facebook"></i
+        ><i class="fa-brands fa-twitter"></i>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="background">
+      <div class="container">
+        <div class="btn-wrap">
+          <div class="btn-left-wrap">
+            <a href="/regist">
+              <button class="btn-left">
+                <i class="fa-solid fa-user"></i><br />
+                회원가입
+              </button>
+            </a>
+          </div>
+
+          <div class="btn-center-wrap">
+            <a href="/memlist">
+              <button class="btn-center">
+                <i class="fa-solid fa-user"></i><br />
+                회원목록
+              </button>
+            </a>
+          </div>
+
+          <div class="btn-right-wrap">
+            <a href="/memlist">
+              <button class="btn-rigth">
+                <i class="fa-solid fa-list"></i><br />
+                게시판
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="toggle.js"></script>
+</body>
