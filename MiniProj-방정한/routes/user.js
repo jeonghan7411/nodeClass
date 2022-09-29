@@ -15,11 +15,11 @@ const db = mysql.createConnection({
 let title = "Bit Groupware";
 
 router.get("/", (req, res) => {
-  res.render("index", { title, sub: " > Home " });
+  res.render("index", { title, sub: " > Main " });
 });
 
 router.get("/regist", (req, res) => {
-  res.render("regist", { title, sub: " > Regist " });
+  res.render("regist", { title, sub: " Member > Regist " });
 });
 
 router.post("/regist", (req, res) => {
@@ -36,6 +36,16 @@ router.post("/regist", (req, res) => {
   );
 });
 
+router.get("/delUser/:idx", (req, res) => {
+  let sql = "DELETE FROM member WHERE idx = ?;";
+  db.query(sql, [req.params.idx], (err) => {
+    if (err) {
+      throw err;
+    }
+    res.redirect("/memlist");
+  });
+});
+
 router.get("/memlist", (req, res) => {
   let sql =
     "SELECT idx,id,name,email,regdate FROM member ORDER BY idx DESC limit 10;";
@@ -43,18 +53,46 @@ router.get("/memlist", (req, res) => {
     if (err) {
       throw err;
     }
-    res.render("memberList", { result, title, sub: " > MemberList" });
+    res.render("memberList", { result, title, sub: "Member > List " });
   });
 });
 
-// app.get("/upUser/:id", (req, res) => {
-//   let sql = "SELECT * FROM MEMBER WHERE id = ?";
-//   db.query(sql, [req.params.id], (err, result) => {
-//     if (err) {
-//       throw err;
-//     }
-//     res.render("upUser", { result, title, sub: " > UpdateUser" });
-//   });
-// });
+router.get("/updateUser/:id", (req, res) => {
+  let sql = "SELECT * FROM member WHERE idx = ?;";
+
+  db.query(sql, [req.params.id], (err, result) => {
+    if (err) {
+      throw err;
+    }
+    console.log(result);
+    res.render("updateUser", { result, title, sub: " Member > Update" });
+  });
+});
+
+router.post("/updateUser", (req, res) => {
+  let sql = "UPDATE member SET pw=?,name=?,email=? WHERE id =?;";
+  const users = {
+    id: req.body.upid,
+    pw: req.body.upPw,
+    name: req.body.upName,
+    email: req.body.upEmail,
+  };
+  db.query(sql, [users.pw, users.name, users.email, users.id], (err) => {
+    if (err) {
+      throw err;
+    }
+    res.redirect("/memlist");
+  });
+});
+
+router.get("/userView/:idx", (req, res) => {
+  let veiwSQL = "SELECT * FROM member WHERE idx = ?;";
+  db.query(veiwSQL, [req.params.idx], (err, result) => {
+    if (err) {
+      throw err;
+    }
+    res.render("userView", { result, title, sub: " Member > View" });
+  });
+});
 
 module.exports = router;

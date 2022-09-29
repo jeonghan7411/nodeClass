@@ -1,31 +1,7 @@
 <%- include('inc/_header') %>
+<link rel="stylesheet" href="style.css" />
 <body>
-  <header>
-    <div class="nav-wrap" id="nav-wrap">
-      <div class="logo-wrap">
-        <a href="/"><img src="logo.jpg" alt="" /></a>
-      </div>
-      <button class="toggle" id="toggle">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
-      <ul class="link-wrap" id="link-wrap">
-        <li><a href="">Home</a></li>
-        <li><a href="">Menu</a></li>
-        <li><a href="">Content</a></li>
-        <li><a href="">Board</a></li>
-        <li><a href="">Q&A</a></li>
-      </ul>
-
-      <div class="icon-wrap" id="icon-wrap">
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-github"></i>
-        <i class="fa-solid fa-envelope"></i>
-        <i class="fa-brands fa-facebook"></i
-        ><i class="fa-brands fa-twitter"></i>
-      </div>
-    </div>
-  </header>
+  <%- include('inc/_menu') %>
 
   <main>
     <form action="" method="post" autocomplete="off" id="form">
@@ -71,7 +47,6 @@
             <small></small>
           </div>
         </div>
-
         <div class="regist-btn-wrap">
           <input type="submit" value="가입" id="submitbtn" />
         </div>

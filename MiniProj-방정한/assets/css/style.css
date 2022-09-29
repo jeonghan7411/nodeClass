@@ -3,6 +3,10 @@
 @import url(./regist.css);
 @import url(./memberList.css);
 @import url(./modal.css);
+@import url(./boardList.css);
+@import url(./view.css);
+@import url(./contentView.css);
+@import url(./write.css);
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap");
 
 body {

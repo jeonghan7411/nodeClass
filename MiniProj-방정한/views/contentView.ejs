@@ -1,0 +1,49 @@
+<%- include('inc/_header') %>
+<link rel="stylesheet" href="../style.css" />
+<body>
+  <%- include('inc/_menu') %>
+
+  <main>
+    <div class="memberList-wrap">
+      <div class="content-view-ewrap">
+        <table>
+          <tr>
+            <td>No</td>
+            <td><%= result[0].idx %></td>
+          </tr>
+          <tr>
+            <td>작성자</td>
+            <td><%= result[0].writer %></td>
+          </tr>
+          <tr>
+            <td>제목</td>
+            <td><%= result[0].title %></td>
+          </tr>
+          <tr>
+            <td>작성일</td>
+            <td><%= result[0].regdate %></td>
+          </tr>
+        </table>
+        <div class="view-content-wrap">
+          <div>내용</div>
+          <div><%= result[0].content %></div>
+        </div>
+      </div>
+
+      <div class="view-icon-wrap">
+        <a href="/boardList"><i class="fa-solid fa-list iconss"></i></a>
+        <a href="/write"><i class="fa-sharp fa-solid fa-plus iconss"></i></a>
+        <a href="/updateBoard/<%= result[0].idx %>"
+          ><i class="fa-solid fa-pen-to-square iconss"></i
+        ></a>
+        <a href="/delBoard/<%= result[0].idx %>"
+          ><i class="fa-solid fa-trash iconss"></i
+        ></a>
+      </div>
+    </div>
+  </main>
+
+  <script src="./js/toggle.js"></script>
+  <script></script>
+  <!-- <script src="./js/modal.js"></script> -->
+</body>

@@ -1,14 +1,19 @@
-.backDrop.visible {
-  display: block;
-  pointer-events: all;
+.backGround {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  width: 100%;
+  height: 115vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: none;
 }
 
 .loginModal {
   position: fixed;
   z-index: 100;
-  width: 80%;
+  width: 20%;
   top: 30vh;
-  left: 10%;
+  left: 40%;
   background-color: white;
   display: none;
   flex-direction: column;
@@ -18,4 +23,79 @@
   border-radius: 10px;
   padding-bottom: 2rem;
   box-shadow: 0 2px 8px RGB(148, 180, 159, 0.5);
+}
+.show-modal {
+  display: block;
+}
+
+.modal-top {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+  align-items: center;
+}
+
+.modaltopbtnwrap {
+  display: flex;
+  align-items: center;
+}
+
+.fa-xmark {
+  cursor: pointer;
+  color: red;
+  font-size: 50px;
+  margin-left: 10px;
+}
+
+.updateinput-box {
+  padding: 15px;
+}
+
+.flexclass {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.updatelabelwrap {
+  font-size: 18px;
+  width: 100px;
+  margin-right: 5px;
+}
+
+.updateinput-wrap {
+  width: 300px;
+  height: 30px;
+}
+
+.updateinput-wrap input {
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-err-input input {
+  border: 1px solid rgb(255, 15, 15);
+}
+
+.modal-suc-input input {
+  border: 1px solid rgb(27, 236, 37);
+}
+
+small {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.fa-floppy-disk,
+.fa-rotate-right {
+  cursor: pointer;
+  color: var(--main-color);
+  font-size: 37px;
+}
+
+.scrock {
+  overflow: hidden;
 }

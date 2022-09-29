@@ -1,0 +1,30 @@
+<%- include('inc/_header') %>
+<link rel="stylesheet" href="../style.css" />
+<body class="scrock">
+  <div class="view-background"></div>
+  <div class="view-total-wrap">
+    <div>
+      <div><h1>회원 상세 보기 페이지</h1></div>
+      <div class="title-img-wrap">
+        <div class="titlewrap">
+          <div>회원 번호 : <%= result[0].idx %></div>
+          <div>회원 이름 : <%= result[0].NAME %></div>
+          <div>회원 비밀번호 : <%= result[0].pw %></div>
+          <div>회원 이메일 : <%= result[0].email %></div>
+          <div>회원 등록일 : <%= result[0].regdate %></div>
+        </div>
+        <div class="img-wrap"><img src="/logo.jpg" alt="" /></div>
+      </div>
+      <div class="view-icon-wrap">
+        <a href="/memlist"><i class="fa-solid fa-list iconss"></i></a>
+        <a href="/regist"><i class="fa-sharp fa-solid fa-plus iconss"></i></a>
+        <a href="/updateUser/<%= result[0].idx %>"
+          ><i class="fa-solid fa-pen-to-square iconss"></i
+        ></a>
+        <a href="/delUser/<%= result[0].idx %>"
+          ><i class="fa-solid fa-trash iconss"></i
+        ></a>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,80 @@
+<%- include('inc/_header') %>
+
+<body>
+  <div class="backGround"></div>
+  <div class="loginModal">
+    <div>
+      <div class="modal-top">
+        <div><h2>게시글 수정</h2></div>
+        <div class="modaltopbtnwrap">
+          <button type="click" id="refreshbtn">
+            <i class="fa-sharp fa-solid fa-rotate-right"></i>
+          </button>
+          <button type="button" id="closemodal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <div>
+        <form
+          action="/updateBoard"
+          method="post"
+          autocomplete="off"
+          id="updateform"
+        >
+          <div class="updateinput-box">
+            <div class="updatepw flexclass">
+              <div class="updatelabelwrap"><label>작성자</label></div>
+              <div class="updateinput-wrap">
+                <input
+                  type="hidden"
+                  id="updateid"
+                  name="upwriter"
+                  value="<%= result[0].writer %>"
+                />
+                <span><%=result[0].writer%></span>
+              </div>
+            </div>
+
+            <div class="updateemail flexclass">
+              <div class="updatelabelwrap"><label>작성일:</label></div>
+              <div class="updateinput-wrap">
+                <span><%=result[0].regdate%></span>
+              </div>
+            </div>
+
+            <div class="updatepw flexclass">
+              <div class="updatelabelwrap"><label>제목:</label></div>
+              <div class="updateinput-wrap">
+                <input
+                  type="text"
+                  id="updatepw"
+                  name="uptitle"
+                  value="<%= result[0].title %>"
+                />
+                <small></small>
+              </div>
+            </div>
+
+            <div class="updatename flexclass">
+              <div class="updatelabelwrap"><label>내용:</label></div>
+              <div class="updateinput-wrap">
+                <input
+                  type="text"
+                  id="updatename"
+                  name="upcontent"
+                  value="<%= result[0].content%>"
+                /><small></small>
+              </div>
+            </div>
+          </div>
+          <div class="flexclass">
+            <button type="submit">
+              <i class="fa-regular fa-floppy-disk"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

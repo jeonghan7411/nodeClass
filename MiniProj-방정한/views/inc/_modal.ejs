@@ -1,23 +1,52 @@
-<div class="backDrop"></div>
-<div class="loginModal invisible">
-  <h2>사용자 수정</h2>
-  <form action="/list" method="post" autocomplete="off">
-    <input type="hidden" name="idx" value="<%= result[0].idx %>" />
-    비밀번호<input
-      type="text"
-      name="passwd"
-      value="<%= result[0].passwd %>"
-    /><br />
-    이름
-    <input type="text" name="name" value="<%= result[0].NAME %>" /><br />
-    전화번호
-    <input type="text" name="phone" value="<%= result[0].phone %>" /><br />
-    사용자 등급<input
-      type="text"
-      name="grade"
-      value="<%= result[0].grade %>"
-    /><br />
-    이메일<input type="text" name="email" value="<%= result[0].email %>" />
-    <input type="submit" value="저장" />
-  </form>
+<div class="backGround"></div>
+<div class="loginModal">
+  <div>
+    <div class="modal-top">
+      <div><h2>사용자 수정</h2></div>
+      <div class="modaltopbtnwrap">
+        <button type="click" id="refreshbtn">
+          <i class="fa-sharp fa-solid fa-rotate-right"></i>
+        </button>
+        <button type="button" id="closemodal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+    <div>
+      <form action="" method="post" autocomplete="off" id="updateform">
+        <div class="updateinput-box">
+          <div class="updatepw flexclass">
+            <div class="updatelabelwrap"><label>비밀번호:</label></div>
+            <div class="updateinput-wrap">
+              <input type="password" id="updatepw" name="upPw" />
+              <small></small>
+            </div>
+          </div>
+
+          <div class="updatename flexclass">
+            <div class="updatelabelwrap"><label>이름:</label></div>
+            <div class="updateinput-wrap">
+              <input type="text" id="updatename" name="upName" /><small></small>
+            </div>
+          </div>
+
+          <div class="updateemail flexclass">
+            <div class="updatelabelwrap"><label>이메일:</label></div>
+            <div class="updateinput-wrap">
+              <input
+                type="text"
+                id="updateemail"
+                name="upEmail"
+              /><small></small>
+            </div>
+          </div>
+        </div>
+        <div class="flexclass">
+          <button type="submit">
+            <i class="fa-regular fa-floppy-disk"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>

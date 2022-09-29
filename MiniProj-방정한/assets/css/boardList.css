@@ -44,7 +44,7 @@
   cursor: pointer;
 }
 
-.list-main table {
+.board-main table {
   border: 1px solid #eee;
   border-radius: 5px;
   text-align: center;
@@ -58,66 +58,64 @@
   font-size: 28px;
 }
 
-.list-main th {
+.board-main th {
   background-color: var(--main-color);
   color: white;
   height: 80px;
   font-size: 24px;
-  padding: 5px;
+  padding: 15px;
 }
 
-.list-main tr {
+.board-main tr {
   height: 50px;
   border: 1px solid #eee;
 }
 
-.list-main td:first {
-  width: 15%;
+.board-main td:first {
+  width: 5%;
   margin-left: 10px;
 }
 
-.list-main td:nth-child(2) {
-  width: 25%;
-  text-decoration: underline;
-}
-
-.list-main td:nth-child(2) a:hover {
+.board-main td:nth-child(2) a:hover {
   color: red;
 }
 
-.list-main td:nth-child(3) {
-  width: 15%;
+.board-main td:nth-child(2) {
+  width: 45%;
 }
 
-.list-main td:nth-child(4) {
-  width: 25%;
+.board-main td:nth-child(3) {
+  width: 10%;
 }
 
-.list-main td:nth-child(5) {
-  width: 15%;
+.board-main td:nth-child(4) {
+  width: 30%;
 }
 
-.list-main td:last-child i {
+.board-main td:nth-child(5) {
+  width: 10%;
+}
+
+.board-main td:last-child > div {
+  display: flex;
+  justify-content: center;
+}
+
+.board-main td:last-child i {
   font-size: 22px;
   color: var(--main-color);
   margin-right: 15px;
   cursor: pointer;
 }
-.memList-updel-wrap {
-  display: flex;
-  justify-content: center;
-  width: 80px;
-  margin-left: 50px;
-}
 
-.list-bottom {
+.bordlist-bottom {
   float: right;
   margin-top: 10px;
   width: 80px;
   height: 30px;
 }
 
-.list-bottom button {
+.bordlist-bottom button {
   background-color: var(--main-color);
   border-radius: 5px;
   color: white;

@@ -2,19 +2,18 @@
 <link rel="stylesheet" href="style.css" />
 <body>
   <%- include('inc/_menu') %>
-
   <main>
     <div class="memberList-wrap">
       <div class="list-top">
-        <div class="list-top-left"><h2>회원목록</h2></div>
+        <div class="list-top-left"><h2>게시판</h2></div>
         <form action="">
           <div class="list-top-right">
             <div class="memlist-select-wrap">
               <select name="" id="">
                 <option>조건검색</option>
                 <option value="">이름</option>
-                <option value="">이메일</option>
-                <option value="">가입날짜</option>
+                <option value="">작성자</option>
+                <option value="">작성일</option>
               </select>
             </div>
             <div class="memlist-input-wrap"><input type="text" /></div>
@@ -22,40 +21,44 @@
           </div>
         </form>
       </div>
-      <div class="list-main">
+      <div class="board-main">
         <table>
           <tr>
             <th>No</th>
-            <th>ID</th>
-            <th>Name</th>
-            <th>E-mail</th>
-            <th>RegDate</th>
+            <th>Title</th>
+            <th>Writer</th>
+            <th>Date</th>
             <th>Update/Delete</th>
           </tr>
-
           <% if(result == "") {%>
           <td colspan="5">
-            <div class="no-mem">등록된 회원이 없습니다.</div>
+            <div class="board-no-mem">작성된 게시물이 없습니다.</div>
           </td>
           <%}else {%> <% for(let i=0; i< result.length; i++){%>
           <tr>
             <td><%= result[i].idx%></td>
             <td>
-              <a href="/userView/<%= result[i].idx %>"><%= result[i].id%></a>
+              <a href="/boardView/<%= result[i].idx %>"
+                ><%= result[i].title%></a
+              >
             </td>
-            <td><%= result[i].name%></td>
-            <td><%= result[i].email%></td>
+            <td>
+              <a href="/userView/<%= result[i].idx %>"
+                ><%= result[i].writer%></a
+              >
+            </td>
+
             <td><%= result[i].regdate%></td>
             <td>
               <div class="memList-updel-wrap">
                 <button id="updateBtn">
-                  <a href="/updateUser/<%= result[i].idx%>"
+                  <a href="/updateBoard/<%= result[i].idx%>"
                     ><i class="fa-regular fa-pen-to-square"></i
                   ></a>
                 </button>
                 <button>
                   <a
-                    href="/delUser/<%= result[i].idx %>"
+                    href="/delBoard/<%= result[i].idx %>"
                     onClick="return confirm('삭제하시겠습니까?')"
                     ><i class="fa-solid fa-trash"></i
                   ></a>
@@ -66,15 +69,13 @@
           <% }}%>
         </table>
       </div>
-      <form action="/regist">
-        <div class="list-bottom">
-          <button>회원추가</button>
+      <form action="/write">
+        <div class="bordlist-bottom">
+          <button>글쓰기</button>
         </div>
       </form>
     </div>
   </main>
   <%- include('inc/_modal') %>
   <script src="./js/toggle.js"></script>
-  <script></script>
-  <!-- <script src="./js/modal.js"></script> -->
 </body>

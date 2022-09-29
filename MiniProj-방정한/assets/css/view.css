@@ -1,0 +1,82 @@
+.view-background {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  width: 100%;
+  height: 115vh;
+  background-color: var(--main-color);
+  opacity: 0.6;
+  z-index: -99;
+}
+
+.scrock {
+  overflow: hidden;
+}
+
+.view-total-wrap {
+  position: fixed;
+  z-index: 100;
+  width: 800px;
+  top: 30vh;
+  left: 30%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid RGB(148, 180, 159);
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-bottom: 2rem;
+  box-shadow: 0 2px 8px RGB(148, 180, 159, 0.5);
+  font-size: 22px;
+}
+
+.view-total-wrap h1 {
+  font-size: 32px;
+  margin: 10px;
+}
+
+.title-img-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-wrap {
+  margin-left: 100px;
+  width: 250px;
+  border: 10px solid var(--main-color);
+  border-radius: 10px;
+}
+
+.titlewrap {
+  margin-top: 15px;
+}
+
+.titlewrap div {
+  margin-top: 10px;
+}
+
+.iconss {
+  margin-right: 15px;
+  font-size: 35px;
+}
+
+.view-icon-wrap a:first-child {
+  color: var(--main-color);
+}
+
+.view-icon-wrap a:nth-child(2) {
+  color: rgb(70, 241, 70);
+}
+
+.view-icon-wrap a:nth-child(3) {
+  color: rgb(151, 67, 247);
+}
+
+.view-icon-wrap a:last-child {
+  color: gray;
+}
+
+.iconss:hover {
+  transform: scale(1.5);
+}

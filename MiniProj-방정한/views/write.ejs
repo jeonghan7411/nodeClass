@@ -1,0 +1,57 @@
+<%- include('inc/_header') %>
+<link rel="stylesheet" href="style.css" />
+<body>
+  <%- include('inc/_menu') %>
+
+  <main>
+    <form action="" method="post" autocomplete="off" id="form">
+      <div class="write-wrap">
+        <div class="write-input-wrap">
+          <div class="label-wrap"><label>제목:</label></div>
+          <div class="write-input">
+            <input
+              type="text"
+              name="writetitle"
+              id="writetitle"
+              class="writetitle"
+            />
+            <small></small>
+          </div>
+        </div>
+
+        <div class="write-input-wrap">
+          <div class="label-wrap"><label>작성자:</label></div>
+          <div class="write-input">
+            <input type="text" name="writer" id="writer" class="writer" />
+            <small></small>
+          </div>
+        </div>
+
+        <div class="write-input-wrap">
+          <div class="label-wrap"><label>내용:</label></div>
+          <div class="write-input">
+            <textarea
+              type="text"
+              name="writecontent"
+              id="writecontent"
+              class="writecontent"
+            >
+            </textarea>
+            <small></small>
+          </div>
+        </div>
+
+        <div class="write-btn-wrap">
+          <input
+            type="submit"
+            value="글쓰기"
+            id="submitbtn"
+            class="write-sub-btn"
+          /></i>
+        </div>
+      </div>
+    </form>
+  </main>
+  <script src="./js/toggle.js"></script>
+  <!-- <script src="./js/regist.js"></script> -->
+</body>
