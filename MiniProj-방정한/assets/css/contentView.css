@@ -30,6 +30,7 @@
 
 .view-content-wrap div:last-child {
   margin: 25px 0;
+  height: 300px;
   font-size: 16px;
   border: 1px solid #eee;
 }

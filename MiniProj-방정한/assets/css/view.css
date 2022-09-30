@@ -55,28 +55,3 @@
 .titlewrap div {
   margin-top: 10px;
 }
-
-.iconss {
-  margin-right: 15px;
-  font-size: 35px;
-}
-
-.view-icon-wrap a:first-child {
-  color: var(--main-color);
-}
-
-.view-icon-wrap a:nth-child(2) {
-  color: rgb(70, 241, 70);
-}
-
-.view-icon-wrap a:nth-child(3) {
-  color: rgb(151, 67, 247);
-}
-
-.view-icon-wrap a:last-child {
-  color: gray;
-}
-
-.iconss:hover {
-  transform: scale(1.5);
-}

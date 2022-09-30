@@ -91,4 +91,47 @@ router.get("/boardView/:idx", (req, res) => {
   });
 });
 
+router.get("/searchboard", (req, res) => {
+  if (req.query.searchboard == "title") {
+    console.log(req.query.searchboard);
+    let sql =
+      "SELECT idx,writer,title,content,regdate FROM board WHERE title regexp ? ORDER BY idx DESC limit 10;";
+    db.query(sql, [req.query.boardSearchInput], (err, result) => {
+      if (err) {
+        throw err;
+      }
+      res.render("boardList", { result, title, sub: "boardSearch" });
+    });
+  } else if (req.query.searchboard == "content") {
+    console.log(req.query.searchboard);
+    let sql =
+      "SELECT idx,writer,title,content,regdate FROM board WHERE content regexp ? ORDER BY idx DESC limit 10;";
+    db.query(sql, [req.query.boardSearchInput], (err, result) => {
+      if (err) {
+        throw err;
+      }
+      res.render("boardList", { result, title, sub: "boardSearch" });
+    });
+  } else if (req.query.searchboard == "writer") {
+    console.log(req.query.searchboard);
+    let sql =
+      "SELECT idx,writer,title,content,regdate FROM board WHERE writer regexp ? ORDER BY idx DESC limit 10;";
+    db.query(sql, [req.query.boardSearchInput], (err, result) => {
+      if (err) {
+        throw err;
+      }
+      res.render("boardList", { result, title, sub: "boardSearch" });
+    });
+  } else if (req.query.searchboard == "regdate") {
+    console.log(req.query.searchboard);
+    let sql =
+      "SELECT idx,writer,title,content,regdate FROM board WHERE regdate regexp ? ORDER BY idx DESC limit 10;";
+    db.query(sql, [req.query.boardSearchInput], (err, result) => {
+      if (err) {
+        throw err;
+      }
+      res.render("boardList", { result, title, sub: "boardSearch" });
+    });
+  }
+});
 module.exports = router;

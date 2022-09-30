@@ -1,0 +1,13 @@
+#updateBoardname {
+  width: 100%;
+  border: 1px solid #eee;
+  outline: none;
+  height: 500px;
+  padding: 5px 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.write-input span {
+  font-size: 24px;
+}

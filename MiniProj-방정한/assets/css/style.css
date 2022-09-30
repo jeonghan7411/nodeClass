@@ -7,6 +7,8 @@
 @import url(./view.css);
 @import url(./contentView.css);
 @import url(./write.css);
+@import url(./updateUser.css);
+@import url(./updateBoard.css);
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap");
 
 body {
@@ -23,57 +25,28 @@ img {
   --main-color: rgb(69, 169, 252);
 }
 
-/* @media screen and (max-width: 900px) {
-  .nav-wrap {
-    max-width: 1170px;
-    margin: 0 auto;
-  }
+/* 아이콘 공통 */
+.iconss {
+  margin-right: 15px;
+  font-size: 35px;
+}
 
-  .toggle {
-    display: block;
-    position: absolute;
-    right: 2rem;
-    z-index: 99;
-  }
+.view-icon-wrap a:first-child {
+  color: var(--main-color);
+}
 
-  .toggle i {
-    color: rgb(69, 169, 252);
-    font-size: 38px;
-    cursor: pointer;
-  }
+.view-icon-wrap a:nth-child(2) {
+  color: rgb(70, 241, 70);
+}
 
-  .link-wrap {
-    display: none;
-  }
+.view-icon-wrap a:nth-child(3) {
+  color: rgb(151, 67, 247);
+}
 
-  .icon-wrap {
-    display: none;
-  }
+.view-icon-wrap a:last-child {
+  color: gray;
+}
 
-  .show-link {
-    position: absolute;
-    width: 95%;
-    background-color: white;
-    top: 1rem;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .show-link a:hover {
-    padding-left: 1.5rem;
-  }
-
-  .btn-wrap {
-    flex-direction: column;
-    margin-left: 25%;
-    height: auto;
-  }
-  .btn-wrap div {
-    margin-bottom: 1rem;
-  }
-
-  .regist-wrap {
-    width: 20rem;
-  }
-} */
+.iconss:hover {
+  transform: scale(1.5);
+}

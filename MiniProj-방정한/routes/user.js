@@ -95,4 +95,47 @@ router.get("/userView/:idx", (req, res) => {
   });
 });
 
+// router.get("/search", (req, res) => {
+//   let sql = "SELECT * FROM member WHERE name regexp ?;";
+
+//   db.query(sql, [req.query.searchInput], (err, result) => {
+//     if (err) {
+//       throw err;
+//     }
+//     res.render("memberList", { result, title, sub: " Member > Search" });
+//   });
+// });
+
+router.get("/search", (req, res) => {
+  if (req.query.search == "name") {
+    let sql =
+      "SELECT idx,id,name,email,regdate FROM member WHERE name regexp ? ORDER BY idx DESC limit 10;";
+    db.query(sql, [req.query.searchInput], (err, result) => {
+      if (err) {
+        throw err;
+      }
+      res.render("memberList", { result, title, sub: "memberSearch" });
+    });
+  } else if (req.query.search == "email") {
+    let sql =
+      "SELECT idx,id,name,email,regdate FROM member WHERE email regexp ? ORDER BY idx DESC limit 10;";
+    db.query(sql, [req.query.searchInput], (err, result) => {
+      if (err) {
+        throw err;
+      }
+      res.render("memberList", { result, title, sub: "memberSearch" });
+    });
+  } else if (req.query.search == "regdate") {
+    let sql =
+      "SELECT idx,id,name,email,regdate FROM member WHERE regdate regexp ? ORDER BY idx DESC limit 10;";
+
+    db.query(sql, [req.query.searchInput], (err, result) => {
+      if (err) {
+        throw err;
+      }
+      res.render("memberList", { result, title, sub: "memberSearch" });
+    });
+  }
+});
+
 module.exports = router;

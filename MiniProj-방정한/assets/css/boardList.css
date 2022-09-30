@@ -82,6 +82,7 @@
 
 .board-main td:nth-child(2) {
   width: 45%;
+  text-decoration: underline;
 }
 
 .board-main td:nth-child(3) {

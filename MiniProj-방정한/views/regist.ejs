@@ -7,7 +7,9 @@
     <form action="" method="post" autocomplete="off" id="form">
       <div class="regist-wrap">
         <div class="regist-input-wrap">
-          <div class="label-wrap"><label>아이디:</label></div>
+          <div class="label-wrap">
+            <label>아이디:</label>
+          </div>
           <div class="regist-input">
             <input type="text" name="userid" id="userid" class="userid" />
             <small></small>
@@ -53,6 +55,18 @@
       </div>
     </form>
   </main>
-  <script src="./js/toggle.js"></script>
+
+  <div>
+    <button type="button" onClick="popupOpen()">중복체크</button>
+  </div>
+
   <script src="./js/regist.js"></script>
+  <script>
+    function popupOpen() {
+      let url = "/checkid";
+      let nick = "중복검사";
+      let screen = "width = 500. height = 500,top=100,left=200,location =no";
+      window.open(url, nick, screen);
+    }
+  </script>
 </body>

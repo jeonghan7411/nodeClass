@@ -1,0 +1,67 @@
+.update-total-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 600px;
+  top: 20%;
+}
+
+.userUpdateTitle {
+  margin-bottom: 30px;
+}
+
+.updateUserInputWrap {
+  margin-top: 20px;
+  width: 500px;
+}
+
+.updateWrapCommon {
+  display: flex;
+  margin-bottom: 50px;
+  align-items: center;
+  line-height: 15px;
+}
+
+.updateWrapCommon div:first-child {
+  width: 100px;
+  margin-right: 50px;
+}
+
+.inputWrap {
+  width: 300px;
+  height: 30px;
+}
+.inputWrap div {
+  padding-top: 5px;
+}
+
+.inputWrap small {
+  font-size: 18px;
+}
+
+.inputWrap input {
+  border: 1px solid var(--main-color);
+  height: 100%;
+  border-radius: 5px;
+}
+
+.memlistBtn {
+  position: absolute;
+  left: 350px;
+}
+
+.fa-floppy-disk {
+  cursor: pointer;
+  color: var(--main-color);
+  font-size: 37px;
+}
+
+.fa-floppy-disk:hover {
+  transform: scale(1.5);
+}
+
+.updateUserBtnWrap {
+  position: absolute;
+  right: 350px;
+  width: 30px;
+}

@@ -7,18 +7,21 @@
     <div class="memberList-wrap">
       <div class="list-top">
         <div class="list-top-left"><h2>회원목록</h2></div>
-        <form action="">
+        <form action="/search" method="get">
           <div class="list-top-right">
             <div class="memlist-select-wrap">
-              <select name="" id="">
-                <option>조건검색</option>
-                <option value="">이름</option>
-                <option value="">이메일</option>
-                <option value="">가입날짜</option>
+              <select name="search">
+                <option value="name" name="searchName">이름</option>
+                <option value="email" name="searchEmail">이메일</option>
+                <option value="regdate" name="serachDate">가입날짜</option>
               </select>
             </div>
-            <div class="memlist-input-wrap"><input type="text" /></div>
-            <div class="memlist-btn-wrap"><button>검색</button></div>
+            <div class="memlist-input-wrap">
+              <input type="text" name="searchInput" id="memSearch" />
+            </div>
+            <div class="memlist-btn-wrap">
+              <button type="submit" onclick="empty(event);">검색</button>
+            </div>
           </div>
         </form>
       </div>
@@ -73,8 +76,12 @@
       </form>
     </div>
   </main>
-  <%- include('inc/_modal') %>
-  <script src="./js/toggle.js"></script>
-  <script></script>
-  <!-- <script src="./js/modal.js"></script> -->
 </body>
+<script>
+  function empty(e) {
+    if (document.getElementById("memSearch").value == "") {
+      e.preventDefault();
+      alert("검색어를 입력해주세요");
+    }
+  }
+</script>

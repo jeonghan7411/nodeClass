@@ -1,85 +1,76 @@
 <%- include('inc/_header') %>
-  <body>
-    <div class="backGround"></div>
-    <div class="loginModal">
-      <div>
-        <div class="modal-top">
-          <div><h2>사용자 수정</h2></div>
-          <div class="modaltopbtnwrap">
-            <button type="click" id="refreshbtn">
-              <i class="fa-sharp fa-solid fa-rotate-right"></i>
-            </button>
-            <button type="button" id="closemodal">
-              <i class="fa-solid fa-xmark"></i>
-            </button>
+<link rel="stylesheet" href="../style.css" />
+<body class="scrock">
+  <div class="view-background"></div>
+  <div class="view-total-wrap update-total-wrap">
+    <div class="userUpdateTitle">
+      <h2>사용자 정보 수정</h2>
+    </div>
+    <div class="updateUserInputWrap">
+      <form
+        action="/updateUser"
+        method="post"
+        autocomplete="off"
+        id="updateform"
+      >
+        <div class="updateUserIdWrap updateWrapCommon">
+          <div class="inputIdLabel"><label>아이디</label></div>
+          <div class="inputWrap">
+            <input
+              type="hidden"
+              id="updateid"
+              name="upid"
+              value="<%= result[0].id %>"
+            />
+            <div><%= result[0].id %></div>
           </div>
         </div>
-        <div>
-          <form
-            action="/updateUser"
-            method="post"
-            autocomplete="off"
-            id="updateform"
-          >
-            <div class="updateinput-box">
-              <div class="updatepw flexclass">
-                <div class="updatelabelwrap"><label>아이디:</label></div>
-                <div class="updateinput-wrap">
-                  <input
-                    type="hidden"
-                    id="updateid"
-                    name="upid"
-                    value="<%= result[0].id %>"
-                  />
-                  <small></small>
-                </div>
-              </div>
 
-              <div class="updatepw flexclass">
-                <div class="updatelabelwrap"><label>비밀번호:</label></div>
-                <div class="updateinput-wrap">
-                  <input
-                    type="password"
-                    id="updatepw"
-                    name="upPw"
-                    value="<%= result[0].pw %>"
-                  />
-                  <small></small>
-                </div>
-              </div>
-
-              <div class="updatename flexclass">
-                <div class="updatelabelwrap"><label>이름:</label></div>
-                <div class="updateinput-wrap">
-                  <input
-                    type="text"
-                    id="updatename"
-                    name="upName"
-                    value="<%= result[0].NAME %>"
-                  /><small></small>
-                </div>
-              </div>
-
-              <div class="updateemail flexclass">
-                <div class="updatelabelwrap"><label>이메일:</label></div>
-                <div class="updateinput-wrap">
-                  <input
-                    type="text"
-                    id="updateemail"
-                    name="upEmail"
-                    value="<%= result[0].email %>"
-                  /><small></small>
-                </div>
-              </div>
-            </div>
-            <div class="flexclass">
-              <button type="submit">
-                <i class="fa-regular fa-floppy-disk">ds</i>
-              </button>
-            </div>
-          </form>
+        <div class="updateUserPwWrap updateWrapCommon">
+          <div class="inputPwLabel"><label>비밀번호</label></div>
+          <div class="inputWrap">
+            <input
+              type="password"
+              id="updatepw"
+              name="upPw"
+              value="<%= result[0].pw %>"
+            />
+            <small></small>
+          </div>
         </div>
+
+        <div class="updateUserNameWrap updateWrapCommon">
+          <div class="inputNameLabel"><label>이름</label></div>
+          <div class="inputWrap">
+            <input
+              type="text"
+              id="updatename"
+              name="upName"
+              value="<%= result[0].name %>"
+            />
+          </div>
+        </div>
+        <div class="updateUserEmailWrap updateWrapCommon">
+          <div class="inputEmailLabel"><label>이메일</label></div>
+          <div class="inputWrap">
+            <input
+              type="text"
+              id="updateemail"
+              name="upEmail"
+              value="<%= result[0].email %>"
+            />
+          </div>
+        </div>
+
+        <div class="flexclass updateUserBtnWrap">
+          <button type="submit">
+            <i class="fa-regular fa-floppy-disk"></i>
+          </button>
+        </div>
+      </form>
+      <div class="memlistBtn">
+        <a href="/memlist"><i class="fa-solid fa-list iconss"></i></a>
       </div>
     </div>
-  </body>
-</html>
+  </div>
+</body>
